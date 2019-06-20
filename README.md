@@ -1,5 +1,5 @@
 # Paint Redirect POC 
-## Hypothesis: Paint timing api includes redirect time regardless of host origins
+## Hypothesis: Paint timing api navigationStart includes redirect time regardless of host origins
 
 In order to accomplish this we are creating a single node server, and then pointing three different 
 domains (via your hosts file) to the local loopback ip. 
@@ -42,3 +42,14 @@ site3.com/land it prints out the total time from navigation start including the 
        },0);
    </script>
    ```
+
+## Reference
+https://www.w3.org/TR/navigation-timing/ 
+
+https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
+
+## Acronyms 
+FCP: first contentful paint
+
+FP: first paint
+
